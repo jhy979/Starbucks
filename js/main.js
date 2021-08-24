@@ -78,7 +78,6 @@ new Swiper('.promotion .swiper-container', {
 
 
 //Toggle
-
 const promotionEl = document.querySelector('.promotion')
 const promotionToggleBtn = document.querySelector('.toggle-promotion')
 let isHidePromotion = false;
@@ -91,3 +90,26 @@ promotionToggleBtn.addEventListener('click', () => {
     promotionEl.classList.remove('hide')
   }
 })
+
+
+//Random 함수
+function random(min, max) {
+  return parseFloat((Math.random() * (max - min) + min)).toFixed(2)
+}
+
+//Youtube animation
+function floatingObject(selector, delay, size) {
+  gsap.to(
+    selector,
+    .8, {
+      y: size,
+      repeat: -1, //무한 반복
+      yoyo: true, //돌아오기
+      ease: Power1.easeInOut,
+      delay: random(0, delay)
+    })
+}
+
+floatingObject('.floating1', 1, 15)
+floatingObject('.floating2', .5, 15)
+floatingObject('.floating3', 1.5, 20)
