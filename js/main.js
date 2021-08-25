@@ -141,3 +141,7 @@ new Swiper('.awards .swiper-container', {
     nextEl: '.awards .swiper-next'
   }
 })
+
+// 연도 자동 계산
+const thisYear = document.querySelector('.this-year')
+thisYear.textContent = new Date().getFullYear();
