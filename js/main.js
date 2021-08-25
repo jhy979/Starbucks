@@ -113,3 +113,17 @@ function floatingObject(selector, delay, size) {
 floatingObject('.floating1', 1, 15)
 floatingObject('.floating2', .5, 15)
 floatingObject('.floating3', 1.5, 20)
+
+
+// Scroll Magic
+// Scroll Magic
+const spyEls = document.querySelectorAll('section.scroll-spy')
+spyEls.forEach((el, idx) => {
+  new ScrollMagic
+    .Scene({
+      triggerElement: el,
+      triggerHook: .8, //뷰포트 시작0 끝1 사이의 지점을 의미
+    })
+    .setClassToggle(el, 'show')
+    .addTo(new ScrollMagic.Controller())
+})
