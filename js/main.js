@@ -97,7 +97,7 @@ function random(min, max) {
   return parseFloat((Math.random() * (max - min) + min)).toFixed(2)
 }
 
-//Youtube animation
+//Youtube 배경 animation
 function floatingObject(selector, delay, size) {
   gsap.to(
     selector,

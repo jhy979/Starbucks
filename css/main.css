@@ -600,7 +600,8 @@ header .badges .badge {
   flex-grow: 1;
 }
 
-
+/* YOUTUBE */
+/* YOUTUBE */
 .youtube {
   position: relative;
   height: 700px;
@@ -610,7 +611,6 @@ header .badges .badge {
 
 .youtube .youtube__area {
   width: 1920px;
-  background-color: orange;
   position: absolute;
   left: 50%;
   margin-left: calc((1920px /-2));
@@ -748,4 +748,62 @@ header .badges .badge {
 
 .pick-your-favorite .text-group .description {
   margin-bottom: 40px;
+}
+
+
+/* RESERVE STORE */
+
+.reserve-store {
+  background-image: url('/images/reserve_store_bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.reserve-store .inner {
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reserve-store .medal {
+  width: 344px;
+  height: 344px;
+  perspective: 600px;
+}
+
+.reserve-store .inner .medal .front,
+.reserve-store .inner .medal .back {
+  width: 344px;
+  height: 344px;
+  backface-visibility: hidden;
+  transform: rotate(0deg);
+  transition: .7s;
+  position: absolute;
+}
+
+.reserve-store .inner .medal .front {
+  transform: rotateY(0deg);
+}
+
+.reserve-store .inner .medal:hover .front {
+  transform: rotateY(180deg);
+}
+
+.reserve-store .inner .medal .back {
+  transform: rotateY(-180deg);
+}
+
+.reserve-store .inner .medal:hover .back {
+  transform: rotateY(0deg);
+}
+
+.reserve-store .inner .medal .back .btn {
+  position: absolute;
+  top: 240px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
 }
