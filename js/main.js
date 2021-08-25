@@ -55,7 +55,6 @@ new Swiper('.notice-line .swiper-container', {
   loop: true,
 });
 
-
 // Promotion SWIPER
 new Swiper('.promotion .swiper-container', {
   direction: 'horizontal',
@@ -75,6 +74,8 @@ new Swiper('.promotion .swiper-container', {
     nextEl: '.promotion .swiper-next',
   }
 });
+
+
 
 
 //Toggle
@@ -126,4 +127,17 @@ spyEls.forEach((el, idx) => {
     })
     .setClassToggle(el, 'show')
     .addTo(new ScrollMagic.Controller())
+})
+
+
+// AWARDS Swiper Slides
+new Swiper('.awards .swiper-container', {
+  autoplay: true,
+  loop: true,
+  slidesPerView: 5,
+  spaceBetween: 30,
+  navigation: {
+    prevEl: '.awards .swiper-prev',
+    nextEl: '.awards .swiper-next'
+  }
 })
